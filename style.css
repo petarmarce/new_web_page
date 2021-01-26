@@ -55,7 +55,7 @@ header>div {
   justify-content: space-around;
   align-items: center;
   margin: 0 auto;
-  padding: 3% 0;
+  padding: 2% 0;
   background: white;
   border-bottom: 3.5px solid  var(--color-debele-linije);
   border-top: 3.5px solid  var(--color-debele-linije);
@@ -663,18 +663,19 @@ span.special {
 }
 
 .navigation{
-  padding: 10px 0;
+  padding: 7px 0;
   border-bottom: 7px solid  var(--color-debele-linije);
   border-top: 7px solid  var(--color-debele-linije);
 }
 
 .navigation a {
   font-size: 18px;
+  padding: 3px;
 } 
 
 .active-nav-button {
   border: 6px solid var(--color-nav-obrub);
-  border-radius: 4px;
+  border-radius: 3px;
 }
 
 .footer_box h2{
@@ -838,7 +839,7 @@ header{
 }
 
 .navigation{
-  padding: 5px 0;
+  padding: 8px 0;
 }
 
 .navigation a {
