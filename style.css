@@ -9,6 +9,7 @@
   --color-nav-obrub: rgba(18, 55, 92, 40%);
   --color-main-prozori: rgba(18, 55, 92, 40%);
   --color-pozadine:rgb(229, 231, 240);
+  background-color: rgba(18, 55, 92, 5%);
 }
 
 body {
@@ -41,7 +42,7 @@ header>div {
   background: rgba(255, 255, 255, 0.6);
   width: 100%;
   padding: 5% 0;
-  margin:0 auto;
+  margin: 0 auto;
 }
 
 .navigation {
@@ -181,7 +182,7 @@ a.a-action-button {
 .wrapper-index {
   display: grid;
   grid-template-columns: repeat(12, [col-start] 1fr);
-  padding-bottom: 5%;
+  
   background-color: var(--color-pozadine);
 }
 
@@ -238,6 +239,7 @@ a.a-action-button {
 .content-4 {
   grid-column: col-start / -1;
   grid-row: 5;
+  margin-bottom: 5%;
 }
 
 .step3 {
@@ -389,6 +391,7 @@ span.special {
   counter-increment: gallery-cell;
   border: 3px solid var(--color-main-prozori);
   border-bottom: 3px solid var(--color-debele-linije);
+
 }
 .carousel-cell img {
   width: 64vw;
@@ -783,7 +786,8 @@ input {
 /*>600 prices*/
 
 .wrapper-prices{
-  padding: 5% 0;
+  padding: 0;
+  margin: 0;
 }
 
 .wrapper-prices .underline_box {
@@ -795,7 +799,8 @@ input {
   grid-row: 1;
   justify-content: center;
   align-items: flex-start;
-  margin: 2%;
+  margin:0;
+  padding:10% 0;
 }
 
 .prices-2-content {
@@ -803,7 +808,14 @@ input {
   grid-row: 1;
   justify-content:center;
   align-items:flex-start;
-  margin:2%;
+  margin:0;
+  padding:10% 0;
+}
+
+/*>600 Gallery*/
+.carousel-cell {
+  border: 6px solid var(--color-main-prozori);
+  border-bottom: 7px solid var(--color-debele-linije);
 }
 
 }
@@ -875,14 +887,12 @@ header{
 .content-3,
 .content-4 {
   justify-content: flex-start;
-  padding: 5vw 0;
+  padding: 9% 0;
+  padding-top: 0;
   margin: 0;
 } 
 
-.content-1,
-.content-4 {
-  padding-top: 0;
-}
+
 
 .wrapper-index .underline_box {
   padding: 1vw;
@@ -932,6 +942,19 @@ header{
   padding-left: 10%;
 }
 
+/*>768 prices */
+
+.prices-1-content {
+  padding-left: 10%;
+}
+
+.prices-2-content {
+  padding-right: 10%;
+}
+
+
+
+
 }
 
 
@@ -946,22 +969,28 @@ header{
 .wrapper-prices,
 .wrapper-reserve,
 .wrapper-contact {
-  border:3px solid var(--color-debele-linije);
+  border:6px solid var(--color-main-prozori);
   border-top: none;
+  border-bottom: none;
 }
 
 /*>992 header nav i footer*/
 
 header{
-  border: 3px solid var(--color-debele-linije);
+  border: 6px solid var(--color-main-prozori);
+  border-bottom: none;
+}
+
+footer {
+  border: 6px solid var(--color-main-prozori);
   border-bottom: none;
 }
 
 .navigation{
   border-top:7px solid var(--color-debele-linije);
   border-bottom:7px solid var(--color-debele-linije);
-  border-left:3px solid var(--color-debele-linije);
-  border-right:3px solid var(--color-debele-linije);
+  border-left: 6px solid var(--color-main-prozori);
+  border-right: 6px solid var(--color-main-prozori);
 }
 
 .footer-2 a img,
@@ -1076,9 +1105,22 @@ padding: 0.25vw;
 }
 
 /*>992 prices*/
+.wrapper-prices .underline_box {
+  width: 60%;
+}
 
 .wrapper-prices .underline_box {
-  max-width: 300px;
+  max-width: 350px;
+}
+
+.prices-1-content {
+  padding-top: 20%;
+  padding-bottom: 20%;
+}
+
+.prices-2-content {
+  padding-top: 20%;
+  padding-bottom: 20%;
 }
 
 }
