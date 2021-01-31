@@ -12,13 +12,14 @@
 
 <body>
 
-  <main>
+  
 
-    <header>
-      <div>
-        <h1>Visit Biokovo Skywalk<br> by electric bikes!</h1>
-     </div>
-    </header>
+  <header>
+    <div>
+    <h1 class="small_screen">Visit Biokovo Skywalk<br> by electric bikes!</h1>
+    <h1 class="big_screen">Visit Biokovo Skywalk by electric bikes!</h1>
+    </div>
+  </header>
 
     <nav class="navigation">
       <a href="index.html">Home</a>
@@ -30,7 +31,7 @@
     </nav>
 
   <div class="wrapper-reserve">
-    <form method="POST" action="https://formspree.io/f/xoqpyqdz" id="my-form">
+    <form method="POST" data-netlyfy="true" id="my-form">
       <div class="underline_box">
         <label for="input-name" class="required">Name:</label>
         <input type="text" name="name" id="input-name" required="required"><br>
@@ -98,7 +99,7 @@
     
   </div>
 </footer>   
-</main>
+
 
 </body>
 </html>
