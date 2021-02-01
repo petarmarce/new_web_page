@@ -14,10 +14,6 @@ body {
   font-size: 14px;
 }
 
-.big_screen {
-  display:none;
-}
-
 h1, h2, h3, h4, h5, h6 {
   font-family: Ubuntu, serif;
 }
@@ -1126,12 +1122,8 @@ padding: 0.25vw;
 @media only screen and (min-width: 1200px) {
 
   
-  .small_screen {
+  .hide_span {
     display:none;
-  }
-
-  .big_screen {
-    display: inline-block;
   }
 
 .iframe-container iframe, 
