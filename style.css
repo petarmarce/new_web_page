@@ -310,7 +310,9 @@ span.special {
 .bike-2-content,
 .bike-3-content,
 .bike-4-content,
-.bike-5-content {
+.bike-5-content,
+.bike-6-content,
+.bike-7-content {
   display: flex;
 }
 
@@ -337,6 +339,16 @@ span.special {
 .bike-5-content {
   grid-column: col-start / -1;
   grid-row: 5;
+}
+
+.bike-6-content {
+  grid-column: col-start / -1;
+  grid-row: 6;
+}
+
+.bike-7-content {
+  grid-column: col-start / -1;
+  grid-row: 7;
 }
 
 .ourebikes-photo {
@@ -1026,7 +1038,9 @@ padding: 0.25vw;
 .bike-2-content,
 .bike-3-content,
 .bike-4-content,
-.bike-5-content {
+.bike-5-content,
+.bike-6-content,
+.bike-7-content {
   justify-content: center;
   align-items: center;
   padding: 5% 0;
@@ -1056,6 +1070,16 @@ padding: 0.25vw;
 .bike-5-content {
   grid-column: col-start / span 6;
   grid-row: 3;
+}
+
+.bike-6-content {
+  grid-column: col-start 7 / span 6;
+  grid-row: 3;
+}
+
+.bike-7-content {
+  grid-column: col-start / span 6;
+  grid-row: 4;
 }
 
 /*>992 gallery*/
@@ -1126,8 +1150,9 @@ padding: 0.25vw;
 
 .wrapper-index .wide {
   max-width: None;
-  width:89%;
+  width:88%;
 }
+
 
 .iframe-container iframe, 
 .iframe-container object, 
