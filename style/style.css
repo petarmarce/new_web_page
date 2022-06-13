@@ -1,0 +1,518 @@
+:root {
+    /* side padding for for desktop */
+    --side-padding: 50px;
+    --momentum-primary: #f5bf61;
+    --momentum-primary-opacity03: rgb(245, 191, 97, 0.3);
+    --momentum-primary-opacity03: rgb(88, 86, 211, 0.4);
+    --momentum-primary-light: #fcd085;
+    --momentum-primary-light: #a3ccfb;
+    --momentum-secondary: #5856d3;
+    --momentum-secondary: #6598d2;
+    --mobile-header-height: max(8vh, 8vw);
+    --mobile-nav-height: max(8vh, 8vw);
+    --mobile-action-nav-color: hsl(0 0% 0% / 0.75);
+    --paragraph-color: #3c3d3f;
+    --footer-top-color: #E8F4FC;
+    --footer-bottom-color: #9c9db5;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+.blue {
+    font-weight: bold;
+}
+
+.text-bold {
+    font-weight: bold;
+}
+
+.letter-spacing-2 {
+    letter-spacing: .1rem;
+}
+
+.flex {
+    display: flex;
+    gap: var(--gap, 1rem);
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+
+/* coloring some backgrounds using wrappers */
+
+.footer-top {
+    background-color: var(--footer-top-color);
+}
+
+.footer-bottom {
+    background-color: var(--footer-bottom-color);
+}
+
+.hero-wrapper {
+    overflow-x: hidden;
+    /* background-color: var(--footer-top-color); */
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
+}
+
+
+/* Hide scrollbar for chrome */
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+
+/* Hide scrollbar for IE, Edge and Firefox */
+
+body {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+p {
+    line-height: 1.6em;
+    color: var(--paragraph-color);
+    font-size: 18px;
+}
+
+
+/* PRIMARY HEADER */
+
+.primary-header {
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 0;
+    position: relative;
+    z-index: 100000;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-left: var(--side-padding);
+    padding-right: var(--side-padding);
+}
+
+.logo-desktop {
+    height: 50px;
+    margin-right: 50px;
+}
+
+.primary-navigation {
+    font-size: 24px;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+
+/* TODO: remove this (also from html) and use only active class which 
+will be styled in each css separately */
+
+.primary-navigation .active a {
+    color: var(--momentum-primary);
+}
+
+
+/* color of non active anchors*/
+
+.primary-navigation li a {
+    color: var(--paragraph-color);
+}
+
+
+/* MOBILE FEATURES */
+
+.logo-mobile,
+.mobile-action-nav,
+.mobile-nav-toggle {
+    display: none;
+}
+
+
+/* STARTING BLOCKS */
+
+.hero {
+    position: relative;
+    gap: 0;
+    height: 700px;
+    flex-direction: column;
+    justify-content: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.hero h1 {
+    color: var(--momentum-primary);
+    line-height: 1.2em;
+    font-size: 36px;
+    margin-top: 60px;
+    margin-bottom: 50px;
+    position: relative;
+    z-index: 1;
+    order: 1;
+    padding-left: var(--side-padding);
+    padding-right: var(--side-padding);
+}
+
+.hero-paragraph {
+    border-radius: 10px;
+    color: white;
+    width: 350px;
+    margin-bottom: 30px;
+    position: relative;
+    z-index: 1;
+    order: 4;
+    margin-left: var(--side-padding);
+    margin-right: var(--side-padding);
+}
+
+#quote-button,
+#reserve-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--momentum-primary);
+    color: white;
+    border-radius: 5em;
+    font-size: 1.2em;
+    font-weight: bold;
+    max-width: 225px;
+    height: 40px;
+    position: relative;
+    z-index: 1;
+    order: 5;
+    margin-left: var(--side-padding);
+    margin-right: var(--side-padding);
+    cursor: pointer;
+    border: none;
+}
+
+#reserve-button {
+    background-color: var(--momentum-secondary);
+    margin-bottom: 15px;
+}
+
+#quote-button img,
+#reserve-button img {
+    margin-left: 0.5em;
+    height: 50%;
+}
+
+.hero-cover {
+    height: 100%;
+    max-width: 1200px;
+    position: absolute;
+    /* top: 30px;
+    left: calc(var(--side-padding)*1.5); */
+    z-index: 0;
+}
+
+.hero-background-grey {
+    position: absolute;
+    height: 100%;
+    width: 420px;
+    background-color: rgba(27, 23, 23, 30%);
+    left: 0px;
+    z-index: 1;
+}
+
+.photo-copyright {
+    position: absolute;
+    padding: 30px var(--side-padding);
+    color: rgba(255, 255, 255, 60%);
+    left: 0px;
+    bottom: 0px;
+    z-index: 2;
+    font-size: 16px;
+}
+
+
+/* FOOTER DESKTOP*/
+
+.footer-top,
+.footer-bottom {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-left: var(--side-padding);
+    padding-right: var(--side-padding);
+}
+
+.footer-top {
+    padding-top: 75px;
+    padding-bottom: 75px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas: "location address" "location contact-us" "location stay-tuned";
+    row-gap: 50px;
+    column-gap: 50px;
+}
+
+.footer-top h4 {
+    font-size: 18px;
+    padding-bottom: 0.8em;
+}
+
+.footer-top p {
+    font-size: 15px;
+}
+
+.location {
+    grid-area: location;
+}
+
+.address {
+    grid-area: address;
+}
+
+.contact-us {
+    grid-area: contact-us;
+}
+
+.stay-tuned {
+    grid-area: stay-tuned;
+}
+
+.stay-tuned a {
+    color: var(--paragraph-color);
+}
+
+.footer-bottom {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas: "rights-reserved social";
+    align-items: center;
+    column-gap: 50px;
+}
+
+.footer-bottom p {
+    grid-area: rights-reserved;
+    font-size: 15px;
+    color: white;
+}
+
+.social-network {
+    grid-area: social;
+    display: flex;
+    flex-wrap: wrap;
+    --gap: 0.8em;
+}
+
+.fake-favicon {
+    height: 20px;
+}
+
+.fake-favicon-tripadvisor {
+    height: 30px;
+}
+
+.social-network .icon {
+    background-color: white;
+    border-radius: 50%;
+    margin-right: 30px;
+    margin-bottom: 30px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+@media (max-width: 1000px) {
+    /*FOOTER MOBILE*/
+    .footer-top {
+        padding-top: 25px;
+        padding-bottom: 0;
+        grid-gap: 30px;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: "location" "address" "contact-us" "stay-tuned" "stay-in-touch";
+    }
+    .location img {
+        height: auto;
+        width: 100%;
+    }
+    .footer-top h4 {
+        padding-bottom: 10px;
+    }
+    .address h4 {
+        padding-top: 20px;
+    }
+    .footer-bottom {
+        grid-template-columns: 1fr;
+        grid-template-areas: "social" "rights-reserved";
+    }
+}
+
+@media (max-width: 750px) {
+     :root {
+        /* side padding for mobile*/
+        --side-padding: 7%;
+        --momentum-primary: #6598d2;
+        --momentum-primary-light: #8eb9eb;
+        --momentum-secondary: #f5bf61;
+    }
+    /* PRIMARY HEADER*/
+    .primary-header {
+        position: fixed;
+        inset: 0 0 0 0;
+        height: var(--mobile-header-height);
+        background-color: var(--momentum-primary);
+        z-index: 1000;
+        padding: 0 var(--side-padding);
+    }
+    .logo-mobile {
+        height: max(4vh, 4vw);
+        display: block;
+    }
+    .logo-desktop {
+        display: none;
+    }
+    .primary-navigation {
+        --gap: 1.5em;
+        position: fixed;
+        inset: 0 0 0 0;
+        overflow-y: scroll;
+        flex-direction: column;
+        padding: min(20vh, 10rem) 2em;
+        align-items: center;
+        background: hsl(0 0% 0% / 0.8);
+        transform: translateX(100%);
+        transition: transform 400ms ease-out;
+        font-size: 22px;
+        z-index: 1000;
+    }
+    .primary-navigation[data-visible="true"] {
+        transform: translateX(0%);
+    }
+    .primary-navigation li a {
+        color: white;
+    }
+    .primary-navigation .active a {
+        font-size: 1.8em;
+    }
+    .mobile-nav-toggle {
+        display: block;
+        position: absolute;
+        background-color: transparent;
+        background-image: url("/icons/hamburger-icon.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        border: none;
+        height: max(4vh, 4vw);
+        aspect-ratio: 1.8;
+        top: max(2vh, 2vw);
+        right: var(--side-padding);
+        z-index: 9999;
+        cursor: pointer;
+    }
+    .mobile-nav-toggle[aria-expanded="true"] {
+        background-image: url("/icons/close-icon.png");
+    }
+    /* MOBILE ACTION NAV */
+    .mobile-action-nav {
+        height: var(--mobile-nav-height);
+        width: 100%;
+        position: fixed;
+        bottom: 0;
+        display: flex;
+        align-items: center;
+        background: var(--mobile-action-nav-color);
+        border-top: 1px solid var(--momentum-primary);
+        z-index: 100;
+    }
+    .mobile-action-nav a {
+        display: flex;
+        justify-content: center;
+        flex-grow: 1;
+        border-right: 1px solid var(--momentum-primary-opacity03);
+    }
+    #last-mobile-action {
+        border-right: none;
+    }
+    .mobile-action-nav a img {
+        height: max(3vh, 3vw);
+    }
+    /* STARTING BLOCKS */
+    .hero-wrapper {
+        background: transparent;
+    }
+    .hero {
+        background-color: initial;
+        padding-top: 0;
+        padding-bottom: 35px;
+        height: auto;
+    }
+    .hero h1 {
+        margin-top: 30px;
+        font-size: 26px;
+        margin-bottom: 10px;
+        color: var(--momentum-primary);
+    }
+    .hero-paragraph {
+        color: var(--paragraph-color);
+        width: initial;
+    }
+    #quote-button,
+    #reserve-button {
+        margin-bottom: 15px;
+        max-width: initial;
+        height: max(6vh, 6vw);
+    }
+    #quote-button {
+        margin-bottom: 0px;
+    }
+    .hero-cover {
+        width: 100%;
+        position: relative;
+    }
+    .hero-cover-photo-wrapper-relative {
+        position: relative
+    }
+    /* footer */
+    .social-network .icon {
+        background-color: var(--momentum-primary-light);
+    }
+    /* tricks */
+    .blank-start {
+        height: var(--mobile-nav-height);
+    }
+    .blank-end {
+        background-color: var(--footer-bottom-color);
+        height: var(--mobile-nav-height);
+    }
+    .hero-background-grey {
+        display: none;
+    }
+    .photo-copyright {
+        color: rgba(255, 255, 255, 0.5);
+        font-size: 13px;
+        left: 0px;
+        padding-bottom: 15px;
+        /* bottom: unset; */
+        /* top: 0px; */
+        /* right: 0px; */
+    }
+}
