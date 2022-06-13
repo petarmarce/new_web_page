@@ -1,0 +1,185 @@
+main {
+    padding-top: 120px;
+    padding-bottom: 50px;
+    padding-left: var(--side-padding);
+    padding-right: var(--side-padding);
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.grid {
+    display: grid;
+    column-gap: 50px;
+    grid-template-columns: 1fr 2fr;
+    grid-template-areas: "title carousel" "text carousel";
+    margin-bottom: 150px;
+}
+
+.grid-video-holder {
+    display: grid;
+    column-gap: 50px;
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas: "video title" "video text";
+    margin-bottom: 120px;
+}
+
+.grid-video-holder h2 {
+    grid-area: title;
+    align-self: flex-end;
+    color: var(--momentum-primary);
+    font-size: 24px;
+    padding-bottom: 5px;
+}
+
+.grid-video-holder>p {
+    grid-area: text;
+    text-align: justify;
+}
+
+.video {
+    align-self: center;
+    justify-self: flex-start;
+    grid-area: video;
+    width: 94%;
+    aspect-ratio: 1.7777777;
+}
+
+.carousel {
+    justify-self: flex-end;
+    grid-area: carousel;
+    width: 94%;
+}
+
+.grid h2 {
+    grid-area: title;
+    align-self: flex-end;
+    color: var(--momentum-primary);
+    font-size: 24px;
+    padding-bottom: 5px;
+}
+
+.grid>p {
+    grid-area: text;
+    text-align: justify;
+}
+
+.carousel p {
+    margin-top: 15px;
+    align-self: center;
+    text-align: center;
+}
+
+.carousel-cell {
+    width: 100%;
+    counter-increment: gallery-cell;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel-cell span {
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.carousel-cell img {
+    width: 65%;
+    /* width: 35%; */
+}
+
+.flickity-button.flickity-prev-next-button.next {
+    color: white;
+    background-color: var(--momentum-primary);
+    opacity: 0.5;
+    right: 0px;
+}
+
+.flickity-button.flickity-prev-next-button.previous {
+    opacity: 0.5;
+    color: white;
+    background-color: var(--momentum-primary);
+    left: 0px;
+}
+
+.flickity-page-dots .dot {
+    background: var(--momentum-primary) !important;
+}
+
+.carousel-e-bike button.flickity-button.flickity-prev-next-button.previous,
+.carousel-e-bike button.flickity-button.flickity-prev-next-button.next,
+.carousel-mtb button.flickity-button.flickity-prev-next-button.previous,
+.carousel-mtb button.flickity-button.flickity-prev-next-button.next {
+    top: 50%;
+}
+
+@media (max-width: 1000px) {
+    .grid {
+        grid-template-columns: 1fr;
+        grid-template-areas: "title" "text" "carousel";
+    }
+    .carousel {
+        width: 100%;
+    }
+    .grid>p {
+        text-align: left;
+        margin-top: 10px;
+        margin-bottom: 30px;
+    }
+    .grid-video-holder {
+        grid-template-columns: 1fr;
+        grid-template-areas: "title" "text" "video";
+    }
+    .video {
+        width: 100%;
+    }
+    .grid-video-holder>p {
+        text-align: left;
+        margin-top: 10px;
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 750px) {
+    .grid {
+        margin-bottom: 75px;
+    }
+    main {
+        padding: 0px var(--side-padding);
+        margin-top: 20px;
+    }
+    .grid>p {
+        margin-top: 0px;
+        margin-bottom: 35px;
+    }
+    .carousel p {
+        font-size: 14px;
+    }
+    .carousel {
+        width: 100%;
+    }
+    .carousel-e-bike button.flickity-button.flickity-prev-next-button.previous,
+    .carousel-e-bike button.flickity-button.flickity-prev-next-button.next,
+    .carousel-mtb button.flickity-button.flickity-prev-next-button.previous,
+    .carousel-mtb button.flickity-button.flickity-prev-next-button.next {
+        top: 40%;
+    }
+    .carousel-e-bike button,
+    .carousel-mtb button {
+        height: 35px;
+        width: 35px;
+    }
+    /*TESTING CAROUSEL*/
+    .flickity-button.flickity-prev-next-button.next,
+    .flickity-button.flickity-prev-next-button.previous {
+        display: none;
+    }
+    .carousel-cell img {
+        width: 90%;
+    }
+    /*TESTING CAROUSEL*/
+    .grid-video-holder {
+        margin-bottom: 50px;
+    }
+}

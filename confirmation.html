@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Google Tag Manager -->
+    <script>
+        (function(w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                'gtm.start': new Date().getTime(),
+                event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s),
+                dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src =
+                'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-5FHBDWB');
+    </script>
+    <!-- End Google Tag Manager -->
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Form Confirmation</title>
+
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/carousel.css">
+    <link rel="stylesheet" href="style/home-specific.css">
+    <link rel="stylesheet" href="style/form.css">
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <link rel="shortcut icon" type="image/jpg" href="illustrations/male-biker-illustration.png" />
+    <script src="js/nav.js" defer></script>
+</head>
+
+
+
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5FHBDWB"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <header class="primary-header flex">
+
+        <a href="#">
+            <img src="/icons/white-logotip.png" alt="Momentum company logotip" class="logo-mobile">
+            <img src="/icons/logo.svg" alt="Momentum company logo" class="logo-desktop">
+        </a>
+
+        <button class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false">
+            <span class="sr-only">Menu</span>
+        </button>
+
+        <nav>
+            <ul id="primary-navigation" class="primary-navigation flex" data-visible="false">
+                <li>
+                    <a class="text-bold letter-spacing-2" href="index.html">Home</a>
+                </li>
+                <li>
+                    <a class="text-bold letter-spacing-2" href="gallery.html">Gallery</a>
+                </li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <div class="blank-start"></div>
+
+    <div class="hero-wrapper">
+        <section aria-labelledby="confirmation-title" class="hero flex">
+            <div class="hero-cover-photo-wrapper-absolute">
+                <div class="hero-cover-photo-wrapper-relative">
+                    <span class="photo-copyright">photo: Matko Begović, arhiv PPB</span>
+                    <img class="hero-cover" src="photos/biokovo-skywalk-matko-begovic.jpg" alt="cover photo">
+                </div>
+            </div>
+            <div class="hero-background-grey"></div>
+
+            <h1 id="confirmation-title">Thank you for <br> contacting us!</h1>
+
+            <p class="hero-paragraph">
+                Your form is succesfully recieved. We will get back in touch with you soon! Have a great day!<br><br> Kind regards, Momentum team
+
+            </p>
+        </section>
+    </div>
+
+    <nav class="mobile-action-nav">
+        <a href="https://api.whatsapp.com/send?phone=+385976878768"><img src="icons/whatsapp-icon-6598d2.png" alt="whatsapp icon"></a>
+        <a href="mailto: rentabikemmentum@gmail.com"><img src="icons/mail-icon-6598d2.png" alt="mail icon"></a>
+        <a href="tel:+385976878768"><img src="icons/call-icon-6598d2.png" alt="phone icon"></a>
+        <a href="https://goo.gl/maps/gAtMr4Eg7Wiy9R63A" id="last-mobile-action"><img src="icons/directions-icon-6598d2.png" alt="directions icon"></a>
+    </nav>
+
+</body>
+
+</html>
