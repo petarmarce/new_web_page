@@ -1,6 +1,7 @@
 :root {
     --form-color: #f0a500;
     --form-color: #f5bf61;
+    --form-color: #6598d2;
     --form-side-padding: 7%;
 }
 
@@ -113,6 +114,7 @@ input:focus,
 textarea:focus {
     outline: 0;
     border-color: #bd8200;
+    border-color: #6598d2;
 }
 
 input:focus+.input-icon i {
